@@ -3,13 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://LeHoangNhatMinh14.github.io/my-portfolio",
+  "homepage": "https://leHoangNhatMinh14.github.io/portfolio",
 
   "scripts": {
     "dev": "vite",
-    "build": "vite build --outDir .",
+    "build": "vite build",
     "preview": "vite preview",
-    "deploy": "git add . && git commit -m 'Deploy' && git push origin main"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "vue": "^3.5.13"
