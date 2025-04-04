@@ -1,0 +1,17 @@
+.progress-fill {
+    transition: width 1s ease-out;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #3a86ff, #8338ec);
+    border-radius: 4px;
+  }
+  
+  /* Project card hover effect */
+  .project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .project-card.hovered {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  }

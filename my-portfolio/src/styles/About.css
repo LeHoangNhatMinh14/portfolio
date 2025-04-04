@@ -1,0 +1,120 @@
+/* About.css */
+.about-section {
+    background: white;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="%23f5f7fa" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"/></svg>');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: 0;
+  }
+  
+  .about-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .about-text p {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  
+  .about-text p:first-child {
+    font-size: 1.2rem;
+    color: #2c3e50;
+  }
+  
+  .about-cta {
+    margin-top: 2rem;
+  }
+  
+  .resume-button {
+    display: inline-flex;
+    align-items: center;
+    background: #3a86ff;
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+  }
+  
+  .resume-button:hover {
+    background: #2667cc;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(58, 134, 255, 0.4);
+  }
+  
+  .about-image {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .profile-image {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .image-decorator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #3a86ff;
+    border-radius: 20px;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .about-image:hover .image-decorator {
+    top: 15px;
+    left: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    
+    .about-image {
+      order: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-image {
+      max-width: 300px;
+    }
+    
+    .about-text p {
+      font-size: 1rem;
+    }
+  }
