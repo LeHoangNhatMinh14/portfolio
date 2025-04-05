@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { TypeAnimation } from 'react-type-animation';
+import profileImage from '../documents/profile.jpg';
 import '../styles/Hero.css';
+import { image } from 'framer-motion/client';
 
 export default function Hero({ scrollToProjects }) {
   const heroRef = useRef(null);
@@ -12,24 +13,11 @@ export default function Hero({ scrollToProjects }) {
 
   return (
     <section className="hero" ref={heroRef}>
-      <div className="container">
+      <div className="hero-container">
         <div className="hero-content">
           <h1>
-            Hi, I'm <span className="highlight">Your Name</span>
+            Hi, I'm <span className="highlight">Minh</span>
           </h1>
-          <TypeAnimation
-            sequence={[
-              'Software Developer',
-              1000,
-              'Frontend Specialist',
-              1000,
-              'Tech Enthusiast',
-              1000
-            ]}
-            wrapper="h2"
-            speed={50}
-            repeat={Infinity}
-          />
           <p className="subtitle">
             Crafting exceptional digital experiences with React, Node.js, and modern web technologies
           </p>
@@ -46,11 +34,7 @@ export default function Hero({ scrollToProjects }) {
           </div>
         </div>
         <div className="hero-image">
-          <img 
-            src="/developer-illustration.svg" 
-            alt="Developer illustration" 
-            className="floating-animation"
-          />
+          
         </div>
       </div>
     </section>

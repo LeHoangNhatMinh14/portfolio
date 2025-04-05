@@ -1,46 +1,28 @@
-import { useEffect, useRef } from 'react';
+import { FaReact, FaJs, FaCss3Alt, FaUnity, FaDocker} from 'react-icons/fa'; // Import icons
+import { TbBrandCSharp } from "react-icons/tb";
+import '../styles/Skills.css'
 
 export default function Skills() {
   const skills = [
-    { name: 'React', level: 85 },
-    { name: 'JavaScript', level: 90 },
-    { name: 'CSS', level: 80 }
+    { name: 'React', icon: <FaReact />, category: 'Frontend' },
+    { name: 'JavaScript', icon: <FaJs />, category: 'Language' },
+    { name: 'CSS', icon: <FaCss3Alt />, category: 'Styling' },
+    { name: 'Node.js', icon: <FaJs />, category: 'Backend' },
+    { name: 'Python', icon: <FaJs />, category: 'Language' },
+    { name: 'Unity', icon: <FaUnity />, category: 'Game Dev'},
+    { name: 'Unity', icon: <TbBrandCSharp />, category: 'Language'},
+    { name: 'Docker', icon: <FaDocker />, category: 'CI/CD'},
   ];
 
-  const barsRef = useRef([]);
-
-  useEffect(() => {
-    // Animate progress bars on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.width = `${entry.target.dataset.level}%`;
-        }
-      });
-    }, { threshold: 0.5 });
-
-    barsRef.current.forEach(bar => observer.observe(bar));
-
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section id="skills" className="section">
-      <h2 className="section-title">My Skills</h2>
-      <div className="skills-container">
-        {skills.map((skill, index) => (
-          <div key={skill.name} className="skill-item">
-            <div className="skill-info">
-              <span>{skill.name}</span>
-              <span>{skill.level}%</span>
-            </div>
-            <div className="progress-bar">
-              <div
-                ref={el => barsRef.current[index] = el}
-                className="progress-fill"
-                data-level={skill.level}
-              />
-            </div>
+    <section id="skills" className="skills-section">
+      <h2 className="section-title">Technologies I Use</h2>
+      <div className="skills-grid">
+        {skills.map((skill) => (
+          <div key={skill.name} className="skill-card">
+            <div className="skill-icon">{skill.icon}</div>
+            <h3>{skill.name}</h3>
+            <span className="skill-category">{skill.category}</span>
           </div>
         ))}
       </div>

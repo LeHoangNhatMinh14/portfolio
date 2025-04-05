@@ -36,7 +36,7 @@ export default function Footer() {
       viewport={{ once: true }}
       variants={footerVariants}
     >
-      <div className="container">
+      <div className="footer-container">
         <div className="footer-grid">
           {/* Contact Section */}
           <motion.div className="footer-section" variants={itemVariants}>

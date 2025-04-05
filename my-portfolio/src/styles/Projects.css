@@ -1,169 +1,184 @@
 /* Projects.css */
 .projects-section {
-    background: #f8fafc;
-    position: relative;
-  }
-  
-  .projects-section::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background: white;
-    z-index: 0;
+  background: #f8fafc;
+  padding: 6rem 0;
+  position: relative;
+}
+
+.projects-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: white;
+  z-index: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+
+.filter-buttons button {
+  background: transparent;
+  border: 2px solid #e2e8f0;
+  color: #4a5568;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.filter-buttons button:hover {
+  border-color: #cbd5e0;
+  background: rgba(203, 213, 224, 0.1);
+}
+
+.filter-buttons button.active {
+  background: #3a86ff;
+  border-color: #3a86ff;
+  color: white;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center; /* Center the project cards */
+  position: relative;
+  z-index: 1;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-content h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.project-content p {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tags span {
+  background: #f0f4f8;
+  color: #3a86ff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.link-button {
+  background: #3a86ff;
+  color: white;
+}
+
+.link-button:hover {
+  background: #2667cc;
+  transform: translateY(-2px);
+}
+
+.link-button.secondary {
+  background: transparent;
+  color: #3a86ff;
+  border: 2px solid #3a86ff;
+}
+
+.link-button.secondary:hover {
+  background: rgba(58, 134, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
   
   .filter-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-  }
-  
-  .filter-buttons button {
-    background: transparent;
-    border: 2px solid #e2e8f0;
-    color: #4a5568;
-    padding: 0.5rem 1.5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-weight: 600;
-  }
-  
-  .filter-buttons button:hover {
-    border-color: #cbd5e0;
-    background: rgba(203, 213, 224, 0.1);
-  }
-  
-  .filter-buttons button.active {
-    background: #3a86ff;
-    border-color: #3a86ff;
-    color: white;
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 2rem;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .project-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    position: relative;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
   }
   
   .project-image {
-    height: 220px;
-    overflow: hidden;
-    position: relative;
+    height: 180px;
   }
-  
-  .project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  .project-card:hover .project-image img {
-    transform: scale(1.05);
-  }
-  
-  .project-content {
-    padding: 1.5rem;
-  }
-  
-  .project-content h3 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-    font-size: 1.4rem;
-  }
-  
-  .project-content p {
-    color: #4a5568;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  .tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  .tech-tags span {
-    background: #f0f4f8;
-    color: #3a86ff;
-    padding: 0.3rem 0.8rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 600;
-  }
-  
-  .project-links {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .link-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: all 0.3s;
-  }
-  
-  .link-button {
-    background: #3a86ff;
-    color: white;
-  }
-  
-  .link-button:hover {
-    background: #2667cc;
-    transform: translateY(-2px);
-  }
-  
-  .link-button.secondary {
-    background: transparent;
-    color: #3a86ff;
-    border: 2px solid #3a86ff;
-  }
-  
-  .link-button.secondary:hover {
-    background: rgba(58, 134, 255, 0.1);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .projects-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .filter-buttons {
-      margin-bottom: 2rem;
-    }
-    
-    .project-image {
-      height: 180px;
-    }
-  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.03);
+}
