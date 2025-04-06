@@ -1,23 +1,27 @@
+import image1 from '../images/image.png';
+import image2 from '../images/Image2.png';
+
 export const projects = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "Full-featured online store with payment integration and admin dashboard",
-    technologies: ["React", "Node.js", "MongoDB"],
-    image: "/images/project1.jpg",
-    githubUrl: "https://github.com/yourusername/ecommerce",
-    liveUrl: "https://your-ecommerce-demo.com",
-    category: "Web Application"
+    title: "Office reservation project",
+    description: "This is a office reservation project me and my group made for the company Driessen in semester 3",
+    technologies: ["React", "Java", "MySQL","Docker"],
+    image: image1,
+    backEndgithubUrl: "https://github.com/LeHoangNhatMinh14/office-reservation-system",
+    category: "Web Application",
+    workOn: "Group",
   },
   {
     id: 2,
-    title: "Unity Mobile Game",
-    description: "2D platformer game with 10+ levels published on Google Play",
-    technologies: ["C#", "Unity", "Blender"],
-    image: "/images/project2.jpg",
-    githubUrl: "https://github.com/yourusername/unity-game",
-    playStoreUrl: "https://play.google.com/store/apps/details?id=com.yourgame",
-    category: "Game Development"
+    title: "Guessing Game project",
+    description: "This is a guessing game individual project that I made for semester 3",
+    technologies: ["React", "Java", "MySQL","Docker"],
+    image: image2,
+    backEndgithubUrl: "https://github.com/LeHoangNhatMinh14/guessing-game-semester-3",
+    frontEndgithubURL: "https://github.com/LeHoangNhatMinh14/guessing-game-semester-3-fe",
+    category: "Game Development",
+    workOn: "Individual",
   },
   // Add more projects as needed
 ];

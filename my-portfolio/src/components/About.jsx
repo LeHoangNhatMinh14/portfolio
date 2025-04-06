@@ -1,11 +1,31 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 import '../styles/About.css';
+import cvPdf from '../documents/LHNM_CV.pdf';
 
 export default function About() {
+  const [fileSize, setFileSize] = useState('');
   const variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0 }
   };
+
+  useEffect(() => {
+    async function getFileSize() {
+      try {
+        const response = await fetch(cvPdf);
+        const blob = await response.blob();
+        const sizeInMB = (blob.size / (1024*1024)).toFixed(1);
+        setFileSize(`(PDF, ${sizeInMB}MB)`);
+        
+      } catch (error) {
+        console.error("Error getting file size:", error);
+        setFileSize("(PDF)");
+      }
+    }
+
+    getFileSize();
+  }, []);
 
   return (
     <section id="about" className="about-section">
@@ -21,26 +41,28 @@ export default function About() {
           <h2 className="section-title">About Me</h2>
           <div className="about-text">
             <p>
-              I'm a passionate software developer currently studying ICT at Fontys. 
-              With over 2 years of hands-on experience, I specialize in building 
-              responsive web applications using modern JavaScript frameworks.
+              Hi! I'm a second-year Software student at ICT Fontys with a strong focus on programming. 
+              I'm passionate about building things that work — from desktop tools to web applications — 
+              and I strive to grow a little more with every project I take on.
             </p>
+            
             <div className="about-cta">
               <a 
-                href="/documents/LHNM_CV.pdf" 
+                href={cvPdf} 
                 download="LeHoangNhatMinh_CV.pdf"
                 className="resume-button"
+                aria-label="Download CV"
               >
-                Download Full CV
+                Download CV {fileSize && <span className="file-size">{fileSize}</span>}
               </a>
-              <a 
-                href="/documents/LHNM_CV.pdf" 
-                target="_blank"
-                rel="noopener noreferrer"
+              
+              <button 
+                onClick={() => window.open(cvPdf, '_blank')}
                 className="resume-button secondary"
+                aria-label="View CV in browser"
               >
-                View in Browser
-              </a>
+                View CV
+              </button>
             </div>
           </div>
         </motion.div>

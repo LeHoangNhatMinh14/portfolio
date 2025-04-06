@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
-import '../styles/Footer.css'; // Create this CSS file
+import { FaGithub, FaEnvelope, FaLinkedin } from 'react-icons/fa';
+import '../styles/Footer.css';
 
 const footerVariants = {
   hidden: { opacity: 0 },
@@ -40,54 +40,47 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Contact Section */}
           <motion.div className="footer-section" variants={itemVariants}>
-            <h3>Get In Touch</h3>
-            <ul className="contact-list">
-              <li>
-                <FaEnvelope className="icon" />
-                <a href="mailto:your.email@example.com">your.email@example.com</a>
-              </li>
-              <li>
-                <span className="icon">📱</span>
-                <span>+1 (234) 567-8900</span>
-              </li>
-            </ul>
+            <h3>Contact</h3>
+            <div className="section-content">
+              <ul className="contact-list">
+                <li>
+                  <FaEnvelope className="icon" />
+                  <a href="mailto:minh.lhn14@gmail.com">minh.lhn14@gmail.com</a>
+                </li>
+              </ul>
+            </div>
           </motion.div>
 
           {/* Social Links */}
           <motion.div className="footer-section" variants={itemVariants}>
-            <h3>Connect With Me</h3>
-            <div className="social-links">
-              <a href="https://github.com/yourusername" target="_blank" rel="noreferrer">
-                <FaGithub className="social-icon" />
-              </a>
-              <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer">
-                <FaLinkedin className="social-icon" />
-              </a>
-              <a href="https://twitter.com/yourhandle" target="_blank" rel="noreferrer">
-                <FaTwitter className="social-icon" />
-              </a>
+            <h3>Social</h3>
+            <div className="section-content">
+              <div className="social-links">
+                <a href="https://github.com/LeHoangNhatMinh14" target="_blank" rel="noreferrer">
+                  <FaGithub className="social-icon" />
+                </a>
+                <a href="https://www.linkedin.com/in/nh%E1%BA%ADt-minh-l%C3%AA-ho%C3%A0ng-993801295/" target="_blank" rel="noreferrer">
+                  <FaLinkedin className="social-icon" />
+                </a>
+              </div>
             </div>
           </motion.div>
 
           {/* Quick Links */}
           <motion.div className="footer-section" variants={itemVariants}>
-            <h3>Quick Links</h3>
-            <ul className="quick-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-            </ul>
+            <h3>Links</h3>
+            <div className="section-content">
+              <ul className="quick-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+              </ul>
+            </div>
           </motion.div>
         </div>
 
-        {/* Copyright */}
-        <motion.div 
-          className="copyright"
-          variants={itemVariants}
-        >
-          <p>© {currentYear} Your Name. All rights reserved.</p>
-          <p>Built with React & Vite</p>
+        <motion.div className="copyright" variants={itemVariants}>
+          <p>© {currentYear} Nhat Minh</p>
         </motion.div>
       </div>
     </motion.footer>

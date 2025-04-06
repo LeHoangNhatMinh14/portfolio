@@ -1,13 +1,11 @@
 import { useEffect, useRef } from 'react';
-import profileImage from '../documents/profile.jpg';
 import '../styles/Hero.css';
-import { image } from 'framer-motion/client';
+import profileImage from "../documents/profile.jpg"; // Renamed for clarity
 
 export default function Hero({ scrollToProjects }) {
   const heroRef = useRef(null);
 
   useEffect(() => {
-    // Fade-in animation
     heroRef.current.style.opacity = 1;
   }, []);
 
@@ -19,22 +17,27 @@ export default function Hero({ scrollToProjects }) {
             Hi, I'm <span className="highlight">Minh</span>
           </h1>
           <p className="subtitle">
-            Crafting exceptional digital experiences with React, Node.js, and modern web technologies
+            Just a developer that likes to mess around
           </p>
           <div className="hero-buttons">
             <button 
               onClick={scrollToProjects}
               className="cta-button"
+              aria-label="View my projects"
             >
               View My Work ↓
             </button>
-            <a href="#contact" className="secondary-button">
-              Contact Me
-            </a>
           </div>
         </div>
         <div className="hero-image">
-          
+          <div className="profile-picture">
+            <img 
+              src={profileImage} 
+              alt="Profile of Minh" 
+              className="profile-img"
+              loading="lazy" // Better performance
+            />
+          </div>
         </div>
       </div>
     </section>

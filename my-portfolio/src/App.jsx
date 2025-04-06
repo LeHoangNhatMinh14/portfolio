@@ -5,7 +5,6 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Footer from './components/Footer.jsx';
-import './styles/main.css';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');

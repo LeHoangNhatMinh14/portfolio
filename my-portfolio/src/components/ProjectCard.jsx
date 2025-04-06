@@ -25,14 +25,14 @@ export default function ProjectCard({ project }) {
           ))}
         </div>
         <div className="project-links">
-          {project.liveUrl && (
-            <a href={project.liveUrl} target="_blank" rel="noreferrer" className="link-button">
-              Live Demo
+          {project.frontEndgithubURL && (
+            <a href={project.frontEndgithubURL} target="_blank" rel="noreferrer" className="link-button">
+              Frontend code
             </a>
           )}
-          {project.githubUrl && (
-            <a href={project.githubUrl} target="_blank" rel="noreferrer" className="link-button secondary">
-              View Code
+          {project.backEndgithubUrl && (
+            <a href={project.backEndgithubUrl} target="_blank" rel="noreferrer" className="link-button secondary">
+              Backend Code
             </a>
           )}
           {project.playStoreUrl && (

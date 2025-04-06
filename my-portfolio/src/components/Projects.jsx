@@ -6,14 +6,11 @@ import '../styles/Projects.css';
 export default function Projects() {
   const [filter, setFilter] = useState('All');
 
-  // Get all unique technologies for filtering
-  const allTech = ['All', ...new Set(
-    projects.flatMap(project => project.technologies)
-  )];
+  const allWorkOn = ['All', ...new Set(projects.map(project => project.workOn))];
 
-  const filteredProjects = filter === 'All' 
-    ? projects 
-    : projects.filter(project => project.technologies.includes(filter));
+  const filteredProjects = filter === 'All'
+    ? projects
+    : projects.filter(project => project.workOn === filter);
 
   return (
     <section id="projects" className="projects-section">
@@ -21,13 +18,13 @@ export default function Projects() {
         <h2 className="section-title">My Projects</h2>
         
         <div className="filter-buttons">
-          {allTech.map(tech => (
+          {allWorkOn.map(work => (
             <button
-              key={tech}
-              onClick={() => setFilter(tech)}
-              className={filter === tech ? 'active' : ''}
+              key={work}
+              onClick={() => setFilter(work)}
+              className={filter === work ? 'active' : ''}
             >
-              {tech}
+              {work}
             </button>
           ))}
         </div>
