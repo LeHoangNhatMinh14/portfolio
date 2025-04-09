@@ -3,6 +3,8 @@ import { useState } from 'react';
 export default function ProjectCard({ project }) {
   const [isHovered, setIsHovered] = useState(false);
 
+  const fallbackImage = 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
+
   return (
     <div 
       className={`project-card ${isHovered ? 'hovered' : ''}`}
@@ -11,7 +13,7 @@ export default function ProjectCard({ project }) {
     >
       <div className="project-image">
         <img 
-          src={project.image} 
+          src={project.image || fallbackImage} 
           alt={project.title}
           style={{ transform: isHovered ? 'scale(1.05)' : 'scale(1)' }}
         />

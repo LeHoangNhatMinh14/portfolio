@@ -20,8 +20,25 @@ export const projects = [
     image: image2,
     backEndgithubUrl: "https://github.com/LeHoangNhatMinh14/guessing-game-semester-3",
     frontEndgithubURL: "https://github.com/LeHoangNhatMinh14/guessing-game-semester-3-fe",
-    category: "Game Development",
+    category: "Web Application",
     workOn: "Individual",
   },
-  // Add more projects as needed
+  {
+    id: 3,
+    title: "Book Review project",
+    description: "This is a web application and a desktop application that I made for me second attempt of my 2nd semester",
+    technologies: ["C#","Sql Server","ASP.Net"],
+    backEndgithubUrl: "https://github.com/LeHoangNhatMinh14/individual-retake",
+    category: "Web Application",
+    workOn: "Individual",
+  },
+  {
+    id: 4,
+    title: "Media Bazaar",
+    description: "This is a web application and a desktop application that me and my group made in the second attept of my 2nd semester",
+    technologies: ["C#","Sql Server","ASP.Net"],
+    backEndgithubUrl: "https://github.com/LeHoangNhatMinh14/media-bazaar-2024",
+    category: "Web Application",
+    workOn: "Individual",
+  },
 ];

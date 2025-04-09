@@ -49,7 +49,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   justify-items: center; /* Center the project cards */
   position: relative;
@@ -160,7 +160,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .filter-buttons {
@@ -182,4 +182,10 @@
 
 .project-card:hover .project-image img {
   transform: scale(1.03);
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* On very small screens, 1 column */
+  }
 }

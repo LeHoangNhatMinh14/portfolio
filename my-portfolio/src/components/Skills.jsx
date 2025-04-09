@@ -1,5 +1,6 @@
-import { FaReact, FaJs, FaCss3Alt, FaUnity, FaDocker} from 'react-icons/fa'; // Import icons
+import { FaReact, FaJs, FaCss3Alt, FaUnity, FaDocker, FaPython} from 'react-icons/fa'; // Import icons
 import { TbBrandCSharp } from "react-icons/tb";
+import { SiDotnet } from "react-icons/si";
 import '../styles/Skills.css'
 
 export default function Skills() {
@@ -7,10 +8,10 @@ export default function Skills() {
     { name: 'React', icon: <FaReact />, category: 'Frontend' },
     { name: 'JavaScript', icon: <FaJs />, category: 'Language' },
     { name: 'CSS', icon: <FaCss3Alt />, category: 'Styling' },
-    { name: 'Node.js', icon: <FaJs />, category: 'Backend' },
-    { name: 'Python', icon: <FaJs />, category: 'Language' },
+    { name: '.NET', icon: <SiDotnet />, category: 'Backend' },
+    { name: 'Python', icon: <FaPython />, category: 'Language' },
     { name: 'Unity', icon: <FaUnity />, category: 'Game Dev'},
-    { name: 'Unity', icon: <TbBrandCSharp />, category: 'Language'},
+    { name: 'C#', icon: <TbBrandCSharp />, category: 'Language'},
     { name: 'Docker', icon: <FaDocker />, category: 'CI/CD'},
   ];
 
