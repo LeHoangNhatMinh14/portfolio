@@ -41,4 +41,14 @@ export const projects = [
     category: "Web Application",
     workOn: "Individual",
   },
+  {
+    id: 5,
+    title: "Final Pursuit",
+    description: "This is a game where I made in a group of 2 people in semester 4",
+    technologies: ["C#","Unity"],
+    backEndgithubUrl: "https://github.com/LeHoangNhatMinh14/FinalPursuit",
+    frontEndgithubURL: "https://lehoangnhatminh14.itch.io/final-pursuit",
+    category: "Game",
+    workOn: "Individual",
+  },
 ];
