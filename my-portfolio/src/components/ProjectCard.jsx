@@ -37,9 +37,9 @@ export default function ProjectCard({ project }) {
               Backend Code
             </a>
           )}
-          {project.playStoreUrl && (
-            <a href={project.playStoreUrl} target="_blank" rel="noreferrer" className="link-button">
-              Play Store
+          {project.itchIowebGame && (
+            <a href={project.itchIowebGame} target="_blank" rel="noreferrer" className="link-button">
+              Itch.io upload
             </a>
           )}
         </div>
