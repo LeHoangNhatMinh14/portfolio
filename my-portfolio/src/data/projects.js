@@ -1,5 +1,6 @@
 import image1 from '../images/image.png';
 import image2 from '../images/Image2.png';
+import image3 from '../images/image3.png'
 
 export const projects = [
   {
@@ -46,8 +47,9 @@ export const projects = [
     title: "Final Pursuit",
     description: "This is a game where I made in a group of 2 people in semester 4",
     technologies: ["C#","Unity"],
+    image: image3,
     backEndgithubUrl: "https://github.com/LeHoangNhatMinh14/FinalPursuit",
-    frontEndgithubURL: "https://lehoangnhatminh14.itch.io/final-pursuit",
+    itchIowebGame: "https://lehoangnhatminh14.itch.io/final-pursuit",
     category: "Game",
     workOn: "Individual",
   },
